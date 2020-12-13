@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace SQL_DOTNET
 {
@@ -50,7 +51,7 @@ namespace SQL_DOTNET
             }
         }
         public DataTable LoadDuLieu(string sql)
-        {
+        { 
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -65,6 +66,7 @@ namespace SQL_DOTNET
             return ketqua;
 
         }
+
        
 
     }

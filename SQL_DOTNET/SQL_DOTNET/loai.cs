@@ -37,20 +37,31 @@ namespace SQL_DOTNET
 
         private void bt_them_Click(object sender, EventArgs e)
         {
-            ketnoi conn = new ketnoi();
-            string ml = txt_ml.Text.ToString();
-            string tl = txt_tl.Text.ToString();
-            string create_data = "insert into loai values ('"+ml+"','"+tl+"')";
-            int ketqua = conn.ThemSuaXoa(create_data);
-            if (ketqua >= 1)
-                MessageBox.Show("Thêm thành công");
-            else
-                MessageBox.Show("Thêm thất bai");
+            try
+            {
+                ketnoi conn = new ketnoi();
+                string ml = txt_ml.Text.ToString();
+                string tl = txt_tl.Text.ToString();
+                string create_data = "insert into loai values ('" + ml + "','" + tl + "')";
+                int ketqua = conn.ThemSuaXoa(create_data);
+                if (ketqua >= 1)
+                    MessageBox.Show("Thêm thành công");
+                else
+                    MessageBox.Show("Thêm thất bai");
 
-            // load lai form
-            txt_ml.Text = "";
-            txt_tl.Text = "";
-            loai_Load(sender, e);
+                // load lai form
+                txt_ml.Text = "";
+                txt_tl.Text = "";
+                loai_Load(sender, e);
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Them dữ liệu không thành công");
+            }
+
+            
+
         }
 
         private void bt_sua_Click(object sender, EventArgs e)
@@ -79,23 +90,33 @@ namespace SQL_DOTNET
 
         private void bt_xoa_Click(object sender, EventArgs e)
         {
-            DialogResult dialog;
-            dialog = MessageBox.Show(" Bạn có muốn xóa hay không", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialog == DialogResult.Yes)
+            try
             {
-                ketnoi conn = new ketnoi();
-                string ml = txt_ml.Text;
-                string tl = txt_tl.Text;
-                string xoa_data = "delete loai where maloai=N'" + ml + "'";
-                int ketqua = conn.ThemSuaXoa(xoa_data);
-                if (ketqua >= 1)
-                    MessageBox.Show("Xoa thành công");
-                else
-                    MessageBox.Show("Xoa thất bai");
+                DialogResult dialog;
+                dialog = MessageBox.Show(" Bạn có muốn xóa hay không", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialog == DialogResult.Yes)
+                {
+                    ketnoi conn = new ketnoi();
+                    string ml = txt_ml.Text;
+                    string tl = txt_tl.Text;
+                    string xoa_data = "delete loai where maloai=N'" + ml + "'";
+                    int ketqua = conn.ThemSuaXoa(xoa_data);
+                    if (ketqua >= 1)
+                        MessageBox.Show("Xoa thành công");
+                    else
+                        MessageBox.Show("Xoa thất bai");
+                }
+                loai_Load(sender, e);
+                txt_ml.Text = "";
+                txt_tl.Text = "";
             }
-            loai_Load(sender, e);
-            txt_ml.Text = "";
-            txt_tl.Text = "";
+            catch (Exception)
+            {
+
+                MessageBox.Show("Xóa dữ liệu không thành công");
+            }
+
+            
         }
 
         private void bt_thoat_Click(object sender, EventArgs e)

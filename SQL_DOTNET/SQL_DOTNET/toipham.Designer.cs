@@ -29,29 +29,29 @@ namespace SQL_DOTNET
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_ttp = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_mtp = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cb_ml = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tb_ns = new System.Windows.Forms.ComboBox();
+            this.data_toipham = new System.Windows.Forms.DataGridView();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_toipham)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox2
+            // txt_ttp
             // 
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(217, 92);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(297, 32);
-            this.textBox2.TabIndex = 4;
+            this.txt_ttp.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_ttp.Location = new System.Drawing.Point(217, 92);
+            this.txt_ttp.Name = "txt_ttp";
+            this.txt_ttp.Size = new System.Drawing.Size(297, 32);
+            this.txt_ttp.TabIndex = 4;
             // 
             // label2
             // 
@@ -63,13 +63,13 @@ namespace SQL_DOTNET
             this.label2.TabIndex = 2;
             this.label2.Text = "TEN TOI PHAM";
             // 
-            // textBox1
+            // txt_mtp
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(217, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(297, 32);
-            this.textBox1.TabIndex = 5;
+            this.txt_mtp.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_mtp.Location = new System.Drawing.Point(217, 39);
+            this.txt_mtp.Name = "txt_mtp";
+            this.txt_mtp.Size = new System.Drawing.Size(297, 32);
+            this.txt_mtp.TabIndex = 5;
             // 
             // label1
             // 
@@ -91,15 +91,15 @@ namespace SQL_DOTNET
             this.label3.TabIndex = 2;
             this.label3.Text = "LOAI TOI PHAM";
             // 
-            // comboBox1
+            // cb_ml
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(783, 34);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(174, 31);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cb_ml.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_ml.FormattingEnabled = true;
+            this.cb_ml.Location = new System.Drawing.Point(783, 34);
+            this.cb_ml.Name = "cb_ml";
+            this.cb_ml.Size = new System.Drawing.Size(174, 31);
+            this.cb_ml.TabIndex = 6;
+            this.cb_ml.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -111,24 +111,25 @@ namespace SQL_DOTNET
             this.label4.TabIndex = 2;
             this.label4.Text = "NAM SINH";
             // 
-            // comboBox2
+            // tb_ns
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(783, 92);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(174, 31);
-            this.comboBox2.TabIndex = 6;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.tb_ns.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_ns.FormattingEnabled = true;
+            this.tb_ns.Location = new System.Drawing.Point(783, 92);
+            this.tb_ns.Name = "tb_ns";
+            this.tb_ns.Size = new System.Drawing.Size(174, 31);
+            this.tb_ns.TabIndex = 6;
+            this.tb_ns.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // dataGridView1
+            // data_toipham
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 288);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(984, 273);
-            this.dataGridView1.TabIndex = 7;
+            this.data_toipham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data_toipham.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.data_toipham.Location = new System.Drawing.Point(0, 288);
+            this.data_toipham.Name = "data_toipham";
+            this.data_toipham.Size = new System.Drawing.Size(984, 273);
+            this.data_toipham.TabIndex = 7;
+            this.data_toipham.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_toipham_CellContentClick);
             // 
             // button4
             // 
@@ -149,6 +150,7 @@ namespace SQL_DOTNET
             this.button3.TabIndex = 9;
             this.button3.Text = "THOAT";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -159,6 +161,7 @@ namespace SQL_DOTNET
             this.button2.TabIndex = 10;
             this.button2.Text = "XOA";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -169,6 +172,7 @@ namespace SQL_DOTNET
             this.button1.TabIndex = 11;
             this.button1.Text = "THEM ";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // toipham
             // 
@@ -179,18 +183,19 @@ namespace SQL_DOTNET
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.data_toipham);
+            this.Controls.Add(this.tb_ns);
+            this.Controls.Add(this.cb_ml);
+            this.Controls.Add(this.txt_ttp);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_mtp);
             this.Controls.Add(this.label1);
             this.Name = "toipham";
             this.Text = "toipham";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.toipham_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.data_toipham)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,15 +203,15 @@ namespace SQL_DOTNET
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_ttp;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_mtp;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cb_ml;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox tb_ns;
+        private System.Windows.Forms.DataGridView data_toipham;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
