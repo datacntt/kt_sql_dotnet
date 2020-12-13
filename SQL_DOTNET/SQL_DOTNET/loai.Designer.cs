@@ -38,6 +38,8 @@ namespace SQL_DOTNET
             this.bt_thoat = new System.Windows.Forms.Button();
             this.bt_sua = new System.Windows.Forms.Button();
             this.data_loai = new System.Windows.Forms.DataGridView();
+            this.maloai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenloai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.data_loai)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,6 +88,7 @@ namespace SQL_DOTNET
             this.bt_them.TabIndex = 2;
             this.bt_them.Text = "THEM ";
             this.bt_them.UseVisualStyleBackColor = true;
+            this.bt_them.Click += new System.EventHandler(this.bt_them_Click);
             // 
             // bt_xoa
             // 
@@ -96,6 +99,7 @@ namespace SQL_DOTNET
             this.bt_xoa.TabIndex = 2;
             this.bt_xoa.Text = "XOA";
             this.bt_xoa.UseVisualStyleBackColor = true;
+            this.bt_xoa.Click += new System.EventHandler(this.bt_xoa_Click);
             // 
             // bt_thoat
             // 
@@ -106,6 +110,7 @@ namespace SQL_DOTNET
             this.bt_thoat.TabIndex = 2;
             this.bt_thoat.Text = "THOAT";
             this.bt_thoat.UseVisualStyleBackColor = true;
+            this.bt_thoat.Click += new System.EventHandler(this.bt_thoat_Click);
             // 
             // bt_sua
             // 
@@ -116,21 +121,40 @@ namespace SQL_DOTNET
             this.bt_sua.TabIndex = 2;
             this.bt_sua.Text = "SUA";
             this.bt_sua.UseVisualStyleBackColor = true;
+            this.bt_sua.Click += new System.EventHandler(this.bt_sua_Click);
             // 
             // data_loai
             // 
             this.data_loai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data_loai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maloai,
+            this.tenloai});
             this.data_loai.Dock = System.Windows.Forms.DockStyle.Right;
-            this.data_loai.Location = new System.Drawing.Point(585, 0);
+            this.data_loai.Location = new System.Drawing.Point(602, 0);
             this.data_loai.Name = "data_loai";
-            this.data_loai.Size = new System.Drawing.Size(399, 466);
+            this.data_loai.Size = new System.Drawing.Size(393, 466);
             this.data_loai.TabIndex = 3;
+            this.data_loai.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_loai_CellContentClick);
+            // 
+            // maloai
+            // 
+            this.maloai.DataPropertyName = "maloai";
+            this.maloai.HeaderText = "Ma Loai";
+            this.maloai.Name = "maloai";
+            this.maloai.Width = 150;
+            // 
+            // tenloai
+            // 
+            this.tenloai.DataPropertyName = "tenloai";
+            this.tenloai.HeaderText = "Ten Loai";
+            this.tenloai.Name = "tenloai";
+            this.tenloai.Width = 200;
             // 
             // loai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 466);
+            this.ClientSize = new System.Drawing.Size(995, 466);
             this.Controls.Add(this.data_loai);
             this.Controls.Add(this.bt_sua);
             this.Controls.Add(this.bt_thoat);
@@ -161,5 +185,7 @@ namespace SQL_DOTNET
         private System.Windows.Forms.Button bt_thoat;
         private System.Windows.Forms.Button bt_sua;
         private System.Windows.Forms.DataGridView data_loai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maloai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenloai;
     }
 }

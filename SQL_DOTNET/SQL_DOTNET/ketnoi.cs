@@ -56,6 +56,16 @@ namespace SQL_DOTNET
             da.Fill(dt);
             return dt;
         }
+        public int ThemSuaXoa(string sql)
+        {
+            SqlCommand comm = new SqlCommand(sql, conn);
+            Mo();
+            int ketqua = comm.ExecuteNonQuery();
+            Dong();
+            return ketqua;
+
+        }
+       
 
     }
 }
