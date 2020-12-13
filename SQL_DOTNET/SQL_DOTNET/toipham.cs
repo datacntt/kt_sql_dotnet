@@ -92,13 +92,35 @@ namespace SQL_DOTNET
                     }
                 }
 
+                // kiem tra matoipham
+                int dem = 0;
+                string kt_matp = "select matoipham from toipham where matoipham = N'" + mtp + "'";
+                DataTable kq = conn.LoadDuLieu(kt_matp);
+                if (kq != null)
+                {
+                    foreach (DataRow dr in kq.Rows)
+                    {
 
-                string create_data = "insert into toipham values ('" + mtp + "','" + ttp + "','" + ml + "','" + ns + "')";
-                int ketqua = conn.ThemSuaXoa(create_data);
-                if (ketqua >= 1)
-                    MessageBox.Show("Thêm thành công");
+                        dem++;
+
+                    }
+                }
+                if (dem == 0)
+                {
+                    // MessageBox.Show("Thêm thành công");
+                    string create_data = "insert into toipham values ('" + mtp + "','" + ttp + "','" + ml + "','" + ns + "')";
+                    int ketqua = conn.ThemSuaXoa(create_data);
+                    if (ketqua >= 1)
+                        MessageBox.Show("Thêm thành công");
+                    else
+                        MessageBox.Show("Thêm thất bai");
+                }
                 else
-                    MessageBox.Show("Thêm thất bai");
+                {
+                    MessageBox.Show("Ma toi pham " + mtp + " da toi tai");
+                }
+                  
+
 
                 // load lai form
                 txt_mtp.Text = "";
@@ -144,9 +166,50 @@ namespace SQL_DOTNET
             {
 
                 MessageBox.Show("Xóa dữ liệu không thành công");
+
             }
 
             
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog;
+            dialog = MessageBox.Show(" Thông tin sẽ bị thay đổi. Bạn có muốn tiếp tục", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialog == DialogResult.Yes)
+            {
+                ketnoi conn = new ketnoi();
+                string mtp = txt_mtp.Text.ToString();
+                string ttp = txt_ttp.Text.ToString();
+                string ns = tb_ns.Text.ToString();
+                // lay ma loai tu ten loai
+                string ml = "";
+                string tl = cb_ml.Text.ToString();
+                string select_ma = "select DISTINCT(maloai) from loai where tenloai = '" + tl + "'";
+                DataTable dt_ml = conn.LoadDuLieu(select_ma);
+                if (dt_ml != null)
+                {
+                    foreach (DataRow dr in dt_ml.Rows)
+                    {
+
+                        ml = dr["maloai"].ToString();
+
+                    }
+                }
+
+                string sua_data = "Update toipham set tentoipham= N'" + ttp + "', ns = '"+ ns + "', maloai = '" + ml + "' where matoipham = N'" + mtp + "'";
+                int ketqua = conn.ThemSuaXoa(sua_data);
+                if (ketqua >= 1)
+                    MessageBox.Show("Sua thành công");
+                else
+                    MessageBox.Show("Sua thất bai");
+
+                // load lai form
+
+            }
+            txt_mtp.Text = "";
+            txt_ttp.Text = "";
+            toipham_Load(sender, e);
         }
     }
 }
