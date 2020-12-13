@@ -67,7 +67,14 @@ namespace SQL_DOTNET
 
         }
 
-       
+        /*
+        using System.Text.RegularExpressions;
 
+        public bool IsNumber(String txt)
+        {
+            Regex re = new Regex(@"^[+-]?[0-9]*\.?[0-9]+$");
+            return re.IsMatch(txt);
+        }
+        */
     }
 }
