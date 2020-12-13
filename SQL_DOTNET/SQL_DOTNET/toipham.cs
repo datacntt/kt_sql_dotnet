@@ -211,5 +211,60 @@ namespace SQL_DOTNET
             txt_ttp.Text = "";
             toipham_Load(sender, e);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            toipham_Load(sender, e);
+        }
+
+        private void txt_timkiem_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                ketnoi conn = new ketnoi();
+                string timkiem = "";
+                string tk = txt_timkiem.Text.Trim();
+                /*
+                if ((txt_timkiem.Text == ""))
+                {
+                    MessageBox.Show("Bạn hãy nhập tên nhân viên cần tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                */
+                //string sql = "SELECT * from toipham WHERE 1=1";
+
+                string ml = "";
+                string tl = cb_ml.Text.ToString();
+                string select_ma = "select DISTINCT(maloai) from loai where tenloai = '" + tl + "'";
+                DataTable dt_ml = conn.LoadDuLieu(select_ma);
+                if (dt_ml != null)
+                {
+                    foreach (DataRow dr in dt_ml.Rows)
+                    {
+
+                        ml = dr["maloai"].ToString();
+
+                    }
+                }
+                timkiem = "SELECT matoipham,tentoipham,tenloai from toipham,loai WHERE loai.maloai = toipham.maloai and tentoipham LIKE N'%" + tk + "%'";
+                //if (txt_timkiem.Text != "")
+                // timkiem += " and tentoipham LIKE N'%" + tk + "%'";
+                DataTable dt = conn.LoadDuLieu(timkiem);
+
+                /*
+                if (dt.Rows.Count == 0)
+                    MessageBox.Show("Không có tên toi pham cần tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else MessageBox.Show("Có " + dt.Rows.Count + " nhân viên thoả mãn điều kiện!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                */
+
+                data_toipham.DataSource = dt;
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Tim kiem dữ liệu không thành công");
+            }
+
+        }
     }
 }
