@@ -76,5 +76,43 @@ namespace SQL_DOTNET
             return re.IsMatch(txt);
         }
         */
+
+
+
+        /*
+          public object ExcuteScalar(string sql)
+        {
+            SqlCommand comm = new SqlCommand(sql, conn);
+            Mo();
+            object ketqua = comm.ExecuteScalar();
+            Dong();
+            return ketqua;
+
+        }
+         int kq = (int)lopchung.ExcuteScalar(sql);
+            if (kq >= 1)
+            {
+                GUI.Main main = new GUI.Main();
+                main.bt_close.Text = "Xin chao, " + ten_nv;
+                if (loai_quyen != "ADMIN")
+                {
+                    main.bt_quantrivien.Visible = false;
+                }
+                this.Hide();
+                main.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                dem++;
+                MessageBox.Show("Đăng nhập thất bại,mời bạn nhập lại");
+                if (dem == 3)
+                {
+                    MessageBox.Show("Bạn đã nhập sai 3 lần");
+                    Application.Exit();
+                }
+            }
+         */
+
     }
 }
