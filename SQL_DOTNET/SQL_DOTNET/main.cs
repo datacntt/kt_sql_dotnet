@@ -16,5 +16,23 @@ namespace SQL_DOTNET
         {
             InitializeComponent();
         }
+
+        private void mALOAIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form frm in this.MdiChildren)
+                frm.Close();
+            loai fr = new loai();
+            fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void tENLOAIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form frm in this.MdiChildren)
+                frm.Close();
+            toipham fr = new toipham();
+            fr.MdiParent = this;
+            fr.Show();
+        }
     }
 }

@@ -1,0 +1,12 @@
+C:\data\C#\kt_sql_dotnet\SQL_DOTNET\SQL_DOTNET\bin\Debug\SQL_DOTNET.exe.config
+C:\data\C#\kt_sql_dotnet\SQL_DOTNET\SQL_DOTNET\bin\Debug\SQL_DOTNET.exe
+C:\data\C#\kt_sql_dotnet\SQL_DOTNET\SQL_DOTNET\bin\Debug\SQL_DOTNET.pdb
+C:\data\C#\kt_sql_dotnet\SQL_DOTNET\SQL_DOTNET\obj\Debug\SQL_DOTNET.csprojAssemblyReference.cache
+C:\data\C#\kt_sql_dotnet\SQL_DOTNET\SQL_DOTNET\obj\Debug\SQL_DOTNET.loai.resources
+C:\data\C#\kt_sql_dotnet\SQL_DOTNET\SQL_DOTNET\obj\Debug\SQL_DOTNET.main.resources
+C:\data\C#\kt_sql_dotnet\SQL_DOTNET\SQL_DOTNET\obj\Debug\SQL_DOTNET.Properties.Resources.resources
+C:\data\C#\kt_sql_dotnet\SQL_DOTNET\SQL_DOTNET\obj\Debug\SQL_DOTNET.csproj.GenerateResource.cache
+C:\data\C#\kt_sql_dotnet\SQL_DOTNET\SQL_DOTNET\obj\Debug\SQL_DOTNET.csproj.CoreCompileInputs.cache
+C:\data\C#\kt_sql_dotnet\SQL_DOTNET\SQL_DOTNET\obj\Debug\SQL_DOTNET.exe
+C:\data\C#\kt_sql_dotnet\SQL_DOTNET\SQL_DOTNET\obj\Debug\SQL_DOTNET.pdb
+C:\data\C#\kt_sql_dotnet\SQL_DOTNET\SQL_DOTNET\obj\Debug\SQL_DOTNET.toipham.resources
